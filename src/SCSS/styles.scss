@@ -1,0 +1,690 @@
+$primaryGreen: #30a6b2;
+$primaryBlue: #1f3c77;
+$primaryBorderRadius: 5px;
+$fadedGreen: #30a5b238;
+$fadedBlack: rgba(0, 0, 0, 0.625);
+
+.formHolder {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+
+  .card {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    filter: brightness(95%);
+    :nth-child(1) {
+      height: 30px;
+      width: 150px;
+      margin: 0 60px;
+    }
+    :nth-child(2) {
+      height: 400px;
+      justify-self: center;
+    }
+  }
+
+  .formWrapper {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+      position: relative;
+      height: 60%;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+        color: $primaryBlue;
+      }
+
+      p {
+        margin: 5px 0 20px;
+      }
+
+      input {
+        width: 95%;
+        height: 30px;
+        padding: 5px;
+        font-size: 15px;
+        margin: 10px 0;
+        border-radius: $primaryBorderRadius;
+        outline: none;
+        border: 1px solid;
+      }
+
+      span {
+        color: $primaryGreen;
+        font-size: 10px;
+        display: block;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: $primaryGreen;
+        color: white;
+        margin: 10px 0;
+        border-radius: $primaryBorderRadius;
+        border: 1px solid;
+      }
+    }
+  }
+}
+
+// Navigation Section
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+  background-color: #fff;
+  box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.619);
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    :nth-child(2) {
+      position: relative;
+      overflow: hidden;
+
+      input {
+        position: relative;
+        font-size: 15px;
+        padding: 3px;
+        border-radius: $primaryBorderRadius;
+        overflow: hidden;
+      }
+      span {
+        position: absolute;
+        z-index: 2;
+        right: 0.1%;
+        font-size: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px;
+        background-color: $primaryGreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 12px;
+      }
+    }
+
+    .logo {
+      height: 30px;
+      width: 150px;
+      margin: 0 150px 0 0;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 0 430px;
+      gap: 30px;
+
+      .adminProfile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+aside {
+  position: fixed;
+  height: 100%;
+  width: 15%;
+  z-index: 1;
+  overflow: auto;
+  padding: 100px 0 20px 0;
+  box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.619);
+
+  h2 {
+    font-size: 13px;
+    padding: 0 0 20px 20px;
+    display: flex;
+  }
+
+  ul {
+    p {
+      font-size: 12px;
+      padding: 0 0 10px 20px;
+      display: flex;
+    }
+
+    .settings {
+      height: 300px;
+    }
+
+    .customers,
+    .business,
+    .settings {
+      padding: 5px 0 20px;
+      small {
+        font-size: 11px;
+        padding: 10px 0 20px 20px;
+      }
+
+      .theUsers {
+        color: black;
+        font-size: 14px !important;
+        background-color: $fadedGreen;
+        border-left: 3px solid $primaryGreen;
+      }
+
+      li {
+        color: $fadedBlack;
+        font-size: 13px;
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px 0 10px 20px;
+        cursor: pointer;
+
+        &:hover {
+          color: black;
+          font-size: 14px !important;
+          background-color: $fadedGreen;
+          border-left: 3px solid $primaryGreen;
+        }
+      }
+    }
+  }
+}
+
+aside::-webkit-scrollbar {
+  display: none;
+}
+
+//
+.Active button {
+  color: green;
+  background-color: $fadedGreen;
+  background-color: re;
+  border: none;
+  outline: none;
+  padding: 2px 10px;
+  border-radius: $primaryBorderRadius;
+}
+
+.Inactive button {
+  color: $fadedBlack;
+  background-color: rgba(0, 0, 0, 0.045);
+  border: none;
+  outline: none;
+  padding: 2px 10px;
+  border-radius: $primaryBorderRadius;
+}
+
+.Pending button {
+  color: yellow;
+  background-color: rgba(153, 205, 50, 0.571);
+  border: none;
+  outline: none;
+  padding: 2px 10px;
+  border-radius: $primaryBorderRadius;
+}
+
+.Blacklisted button {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.173);
+  border: none;
+  outline: none;
+  padding: 2px 10px;
+  border-radius: $primaryBorderRadius;
+}
+
+// Users Section
+.users {
+  margin: 120px 70px 80px 250px;
+  .userComp {
+    margin-top: 20px;
+
+    .userDisplay {
+      .userDetails {
+        background-color: white;
+        display: flex;
+        margin: 20px 0 30px;
+        padding: 20px 20px 40px;
+        gap: 20px;
+        position: relative;
+        box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.619);
+
+        .profileDetails {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          img {
+            height: 100px;
+          }
+          h1 {
+            display: flex;
+            flex-direction: column;
+          }
+
+          small {
+            font-size: 12px;
+          }
+        }
+
+        .usersTier {
+          display: flex;
+          align-items: center;
+          border-left: 1px solid $fadedBlack;
+          padding: 30px;
+        }
+
+        .accountDetails {
+          display: flex;
+          justify-content: center;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          border-left: 1px solid $fadedBlack;
+          padding: 10px;
+
+          p {
+            font-size: 35px;
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .details {
+          width: 95%;
+          position: absolute;
+          display: flex;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 15px;
+          gap: 50px;
+
+          :nth-child(1) {
+            color: $primaryGreen;
+            border-bottom: 3px solid $primaryGreen;
+          }
+
+          li {
+            padding: 2px 15px;
+          }
+        }
+      }
+
+      .information {
+        box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.619);
+        background-color: white;
+        padding: 20px 20px 35px;
+        display: flex;
+        flex-direction: column;
+
+        ul {
+          border-bottom: 1px solid $fadedBlack;
+          margin-bottom: 30px;
+          padding-bottom: 15px;
+        }
+
+        p {
+          font-size: 15px;
+          margin: 5px 0 20px;
+        }
+        li {
+          display: flex;
+          flex-direction: column;
+        }
+        .personal,
+        .education,
+        .socials,
+        .guarantor {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 16px;
+
+          span {
+            font-size: 10px;
+            margin: 8px 0;
+          }
+
+          small {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .userHolder {
+      width: 100%;
+      .current {
+        display: flex;
+
+        gap: 30px;
+
+        & > div {
+          width: 200px;
+          // align-items: center;
+          padding: 30px 20px;
+          background-color: white;
+          box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.619);
+        }
+      }
+
+      .tableHolder {
+        background-color: white;
+        box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.619);
+        margin: 20px auto;
+
+        padding: 10px;
+        table {
+          border: none;
+          width: 100%;
+          background-color: white;
+
+          border-collapse: collapse;
+
+          th {
+            padding: 15px 0 0;
+            font-size: 13px;
+          }
+          td {
+            padding: 25px 20px;
+            border-bottom: 1px solid black;
+            font-size: 13px;
+            .moreDropDown {
+              border: 1px solid black;
+              position: absolute;
+              right: 5%;
+              z-index: 10;
+              height: auto;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              padding: 10px;
+              margin-top: 5px;
+              background-color: white;
+              span {
+                cursor: pointer;
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              &:nth-child(even) {
+                background-color: #f9f9f9;
+
+                :nth-child(1) {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .pagination {
+      position: absolute;
+      right: 80px;
+      width: 100px;
+      overflow: hidden;
+      height: 15px;
+    }
+  }
+}
+
+// media Query
+
+@media (max-width: 1200px) {
+  nav {
+    ul {
+      ul {
+        margin: 0 0 0 200px;
+      }
+    }
+  }
+
+  aside {
+    width: 0;
+  }
+
+  .users {
+    margin: 120px 40px 40px 40px;
+
+    .userComp {
+      .userDisplay {
+        .userDetails {
+        }
+      }
+    }
+
+    .userHolder {
+      .current {
+        flex-wrap: wrap;
+
+        & > div {
+          width: 150px;
+        }
+      }
+
+      .tableHolder {
+        padding: 0;
+        overflow-x: auto;
+
+        table {
+          th {
+            font-size: 10px;
+          }
+          td {
+            font-size: 9px;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  nav {
+    ul {
+      :nth-child(2) {
+        input {
+          display: none;
+        }
+      }
+      ul {
+        margin: 0 0 0 50px;
+      }
+    }
+  }
+
+  .formHolder {
+    justify-content: center;
+    align-items: center;
+    .card {
+      position: absolute;
+      width: 100%;
+      :nth-child(1) {
+        height: 50px;
+        width: 180px;
+        margin: 0 40px;
+      }
+    }
+
+    .formWrapper {
+      width: 90%;
+
+      form {
+        width: 100%;
+
+        input {
+          width: auto;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  nav {
+    ul {
+      :nth-child(3) ul {
+        margin: 0;
+
+        :nth-child(2) {
+          display: none;
+        }
+        .adminProfile {
+          height: 50px;
+        }
+      }
+    }
+
+    .userHolder {
+      .current {
+        flex-wrap: wrap;
+
+        & > div {
+          width: 150px;
+        }
+      }
+
+      .tableHolder {
+        padding: 0;
+        overflow-x: auto;
+
+        table {
+          th {
+            font-size: 10px;
+          }
+          td {
+            font-size: 9px;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .current {
+      flex-direction: column;
+      align-items: center;
+
+      & > div {
+        width: 90%;
+        max-width: none;
+      }
+    }
+
+    .tableHolder {
+      padding: 5px;
+
+      table {
+        th,
+        td {
+          padding: 8px 3px;
+          font-size: 11px;
+        }
+
+        th {
+          padding-top: 10px;
+          font-size: 12px;
+        }
+
+        td {
+          padding: 15px 10px;
+          font-size: 11px;
+        }
+      }
+    }
+
+    .pagination {
+      position: static;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .formHolder {
+    .card {
+      filter: brightness(100%);
+      position: absolute;
+      width: 100%;
+      height: 45%;
+      justify-content: center;
+      top: 0%;
+      align-items: center;
+      :nth-child(2) {
+        display: none;
+      }
+      :nth-child(1) {
+        height: 80px;
+        width: 320px;
+      }
+    }
+
+    .formWrapper {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    ul {
+      justify-content: space-between;
+    }
+
+    .docs {
+      display: none;
+    }
+
+    .adminProfile {
+      justify-content: flex-start;
+      align-items: flex-start;
+      overflow: hidden;
+    }
+    .logo {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .formHolder {
+    .card {
+      height: 30%;
+      :nth-child(1) {
+        width: 250px;
+        height: 60px;
+      }
+    }
+  }
+}
