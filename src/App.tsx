@@ -3,7 +3,7 @@ import "./SCSS/app.scss";
 import LoginForm from "./Components/LoginForm";
 import Dashboard from "./Components/Dashboard";
 
-const App = () => {
+const App: React.FC = () => {
   const [emailInput, setEmailInput] = useState<string>("");
   const [passwordInput, setPasswordInput] = useState<string>("");
   const [logInStatus, setLogInStatus] = useState<Boolean>(() => {
@@ -36,10 +36,6 @@ const App = () => {
         <Dashboard />
       ) : (
         <LoginForm
-          email={email}
-          password={password}
-          logInStatus={logInStatus}
-          setLogInStatus={setLogInStatus}
           handleLogin={handleLogin}
           emailInput={emailInput}
           setEmailInput={setEmailInput}

@@ -97,6 +97,9 @@ const UserComp: React.FC = () => {
     setClickedProfile(false);
   };
 
+  const displayUser = localStorage.getItem("displayUser");
+  const users = displayUser ? JSON.parse(displayUser) : [];
+
   return (
     <div className="userComp">
       {clickedProfile && localStorage.getItem("displayUser") ? (
@@ -105,7 +108,7 @@ const UserComp: React.FC = () => {
             <MdKeyboardBackspace />
             back
           </button>
-          {JSON.parse(localStorage.getItem("displayUser")).map((user: any) => (
+          {users.map((user: any) => (
             <div key={user.index}>
               <div className="userDetails">
                 <div className="profileDetails">

@@ -1,17 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../SCSS/styles.scss";
 
-const mockLink: string =
-  "https://run.mocky.io/v3/20da1b74-1879-44d4-be7e-cda20043fa6b";
-
 interface Props {
-  email: string;
-  setEmail: React.Dispatch<React.SetStateAction<string>>;
-  password: string;
-  setPassword: React.Dispatch<React.SetStateAction<string>>;
-  loginStatus: boolean;
-  setLogInStatus: React.Dispatch<React.SetStateAction<Boolean>>;
-  handleLogin: () => void;
+  handleLogin: (e: React.FormEvent) => void;
   emailInput: string;
   setEmailInput: React.Dispatch<React.SetStateAction<string>>;
   passwordInput: string;
@@ -19,12 +10,6 @@ interface Props {
 }
 
 const LoginForm: React.FC<Props> = ({
-  email,
-  setEmail,
-  password,
-  setPassword,
-  loginStatus,
-  setLogInStatus,
   handleLogin,
   passwordInput,
   setPasswordInput,
@@ -40,7 +25,7 @@ const LoginForm: React.FC<Props> = ({
       {/*  */}
 
       <div className="formWrapper">
-        <form onSubmit={(e) => handleLogin()}>
+        <form onSubmit={(e: React.FormEvent) => handleLogin(e)}>
           <h1>Welcome!</h1>
           <p>Enter details to login</p>
           <input

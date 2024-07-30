@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../SCSS/styles.scss";
 import { IoIosPeople } from "react-icons/io";
 import { AiOutlineSearch, AiTwotoneHome, AiOutlineAudit } from "react-icons/ai";
