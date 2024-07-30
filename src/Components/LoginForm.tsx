@@ -23,7 +23,7 @@ const LoginForm: React.FC<Props> = ({
   setEmail,
   password,
   setPassword,
-  logInStatus,
+  loginStatus,
   setLogInStatus,
   handleLogin,
   passwordInput,
@@ -40,7 +40,7 @@ const LoginForm: React.FC<Props> = ({
       {/*  */}
 
       <div className="formWrapper">
-        <form onSubmit={(e) => handleLogin(e)}>
+        <form onSubmit={(e) => handleLogin()}>
           <h1>Welcome!</h1>
           <p>Enter details to login</p>
           <input

@@ -394,46 +394,52 @@ aside::-webkit-scrollbar {
         margin: 20px auto;
 
         padding: 10px;
-        table {
+        .table {
           border: none;
           width: 100%;
           background-color: white;
+          position: relative;
 
-          border-collapse: collapse;
+          .tableHead {
+            display: flex;
+            gap: 35px;
+            padding: 0 25px;
 
-          th {
-            padding: 15px 0 0;
-            font-size: 13px;
-          }
-          td {
-            padding: 25px 20px;
-            border-bottom: 1px solid black;
-            font-size: 13px;
-            .moreDropDown {
-              border: 1px solid black;
-              position: absolute;
-              right: 5%;
-              z-index: 10;
-              height: auto;
+            li {
+              font-size: 12px;
+              width: auto;
               display: flex;
-              flex-direction: column;
-              gap: 10px;
-              padding: 10px;
-              margin-top: 5px;
-              background-color: white;
-              span {
-                cursor: pointer;
-              }
+              padding: 25px 10px;
             }
           }
 
-          tbody {
-            tr {
-              &:nth-child(even) {
-                background-color: #f9f9f9;
+          .tableBody {
+            display: flex;
+            padding: 10px 25px;
+            width: 100%;
 
-                :nth-child(1) {
-                  display: none;
+            li {
+              padding: 10px;
+              border-bottom: 1px solid black;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              font-size: 12px;
+              .moreDropDown {
+                border: 1px solid black;
+                position: absolute;
+                right: 5%;
+                z-index: 10;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+                margin-top: 5px;
+                background-color: white;
+                span {
+                  cursor: pointer;
                 }
               }
             }
@@ -489,16 +495,6 @@ aside::-webkit-scrollbar {
       .tableHolder {
         padding: 0;
         overflow-x: auto;
-
-        table {
-          th {
-            font-size: 10px;
-          }
-          td {
-            font-size: 9px;
-            padding: 0;
-          }
-        }
       }
     }
   }
@@ -573,16 +569,6 @@ aside::-webkit-scrollbar {
       .tableHolder {
         padding: 0;
         overflow-x: auto;
-
-        table {
-          th {
-            font-size: 10px;
-          }
-          td {
-            font-size: 9px;
-            padding: 0;
-          }
-        }
       }
     }
   }
@@ -602,22 +588,7 @@ aside::-webkit-scrollbar {
     .tableHolder {
       padding: 5px;
 
-      table {
-        th,
-        td {
-          padding: 8px 3px;
-          font-size: 11px;
-        }
-
-        th {
-          padding-top: 10px;
-          font-size: 12px;
-        }
-
-        td {
-          padding: 15px 10px;
-          font-size: 11px;
-        }
+      .table {
       }
     }
 

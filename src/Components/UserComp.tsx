@@ -105,7 +105,7 @@ const UserComp: React.FC = () => {
             <MdKeyboardBackspace />
             back
           </button>
-          {JSON.parse(localStorage.getItem("displayUser")).map((user) => (
+          {JSON.parse(localStorage.getItem("displayUser")).map((user: any) => (
             <div key={user.index}>
               <div className="userDetails">
                 <div className="profileDetails">
@@ -239,7 +239,7 @@ const UserComp: React.FC = () => {
                 <ul className="guarantor">
                   {
                     user.guarantor
-                      .map((person, idx) => (
+                      .map((person: any, idx: any) => (
                         <>
                           <li key={idx}>
                             <span>FULL NAME</span>
@@ -289,60 +289,56 @@ const UserComp: React.FC = () => {
           </div>
 
           <div className="tableHolder">
-            <table>
-              <thead>
-                <tr>
-                  <th>
-                    ORGANIZATION <MdFilterList style={{ cursor: "pointer" }} />
-                  </th>
-                  <th>
-                    USERNAME <MdFilterList style={{ cursor: "pointer" }} />
-                  </th>
-                  <th>
-                    EMAIL <MdFilterList style={{ cursor: "pointer" }} />
-                  </th>
-                  <th>
-                    PHONE NUMBER <MdFilterList style={{ cursor: "pointer" }} />
-                  </th>
-                  <th>
-                    DATE JOINED <MdFilterList style={{ cursor: "pointer" }} />
-                  </th>
-                  <th>
-                    STATUS <MdFilterList style={{ cursor: "pointer" }} />
-                  </th>
-                </tr>
-              </thead>
+            <div className="table">
+              <ul className="tableHead">
+                <li>
+                  ORGANIZATION <MdFilterList style={{ cursor: "pointer" }} />
+                </li>
+                <li>
+                  USERNAME <MdFilterList style={{ cursor: "pointer" }} />
+                </li>
+                <li>
+                  EMAIL <MdFilterList style={{ cursor: "pointer" }} />
+                </li>
+                <li>
+                  PHONE NUMBER <MdFilterList style={{ cursor: "pointer" }} />
+                </li>
+                <li>
+                  DATE JOINED <MdFilterList style={{ cursor: "pointer" }} />
+                </li>
+                <li>
+                  STATUS <MdFilterList style={{ cursor: "pointer" }} />
+                </li>
+              </ul>
               {currentItems.map((data) => (
-                <tbody key={data.index}>
-                  <tr>
-                    <td>{data.organization}</td>
-                    <td>{data.username}</td>
-                    <td>{data.email}</td>
-                    <td>{data.phoneNumber}</td>
-                    <td>{data.dateJoined}</td>
-                    <td className={data.status}>
-                      <button>{data.status}</button>
-                    </td>
+                <ul className="tableBody" key={data.index}>
+                  <li>{data.organization}</li>
+                  <li>{data.username}</li>
+                  <li>{data.email}</li>
+                  <li>{data.phoneNumber}</li>
+                  <li>{data.dateJoined}</li>
+                  <li className={data.status}>
+                    <button>{data.status}</button>
+                  </li>
 
-                    <td>
-                      <AiOutlineMore
-                        onClick={() => handleDropDown(data.index)}
-                        style={{ cursor: "pointer" }}
-                      />
-                      {activeDropdownIndex === data.index && (
-                        <div className="moreDropDown">
-                          <span onClick={() => handleUserData(data.index)}>
-                            View User
-                          </span>
-                          <span>BlackList User</span>
-                          <span>Activate User</span>
-                        </div>
-                      )}
-                    </td>
-                  </tr>
-                </tbody>
+                  <li>
+                    <AiOutlineMore
+                      onClick={() => handleDropDown(data.index)}
+                      style={{ cursor: "pointer" }}
+                    />
+                    {activeDropdownIndex === data.index && (
+                      <div className="moreDropDown">
+                        <span onClick={() => handleUserData(data.index)}>
+                          View User
+                        </span>
+                        <span>BlackList User</span>
+                        <span>Activate User</span>
+                      </div>
+                    )}
+                  </li>
+                </ul>
               ))}
-            </table>
+            </div>
           </div>
           <div className="pagination">
             {Array.from(
