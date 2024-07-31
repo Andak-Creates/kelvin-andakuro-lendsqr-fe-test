@@ -1,30 +1,177 @@
-# React + TypeScript + Vite
+# Kelvin Andakuro Lendsqr FE Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+### Project Title
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Kelvin Andakur Lendsqr FE Test
 
-## Expanding the ESLint configuration
+### Project Description
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The Lendsqr FE Test Platform is a web application that facilitates lending and borrowing by providing an easy-to-use interface for lenders to manage and track users in need of loans. The platform ensures that all necessary user details are accessible in one place, streamlining the lending process.
 
-- Configure the top-level `parserOptions` property like this:
+### Purpose
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+The purpose of this project is to create a comprehensive and scalable solution for online lenders and loan seekers, enhancing the efficiency and accessibility of lending services.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Target Audience
+
+The platform is designed for individuals seeking loans as well as those looking to lend money.
+
+### Key Features
+
+- **User Management**: Provides an intuitive interface for managing user profiles.
+- **User Tracking**: Allows customers to track the status of their benefactors through a dashboard with direct access to user details.
+
+### Technologies Used
+
+- **Frontend**: React, SCSS, TypeScript
+- **Database**: Mocky.io
+- **Others**: TypeScript
+
+### Live Demo
+
+Check out the live demo of the application [here](https://kelvin-andakuro-lendsqr-fe-test.vercel.app/).
+
+---
+
+## Installation Instructions
+
+### For General Users
+
+If you want to use the application, simply visit the hosted link:
+
+- **Live Demo**: [Lendsqr FE Test](https://kelvin-andakuro-lendsqr-fe-test.vercel.app/)
+
+### For Developers
+
+If you want to contribute to the project or run it locally, follow these steps:
+
+### Prerequisites
+
+- Node.js (version X.X.X)
+- npm or yarn
+
+### Steps
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/Andak-Creates/kelvin-andakuro-lendsqr-fe-test
+
+   ```
+
+2. **Navigate to the project directory**:
+   cd lendsqr-fe-test
+
+3. **Install dependecies**:
+   npm install
+
+# or
+
+yarn install
+
+4. **Start the development server**:
+   npm start
+
+# or
+
+yarn start
+
+5. **Open the application in your browser**:
+   http://localhost:5173/
+
+## Usage
+
+### For general use
+
+visit the hosted application to use it:
+https://kelvin-andakuro-lendsqr-fe-test.vercel.app/
+
+1. **Start the development server**:
+   npm start
+
+# or
+
+yarn start
+
+2. **Open your browser and navigate to**
+   http://localhost:5173/
+
+## Navigating the Interface
+
+- **Dashboard**:
+  Overview of loan and user status.
+
+- **User Management**:
+  Add, edit, and delete user profiles.
+
+- **Loan Tracking**:
+  View loan statuses and user details.
+
+## Architecture
+
+## Project Structure
+
+- **src/: Main source code directory.**
+- **components/: Reusable React components.**
+- **styles/: SCSS stylesheets.**
+- **services/: API service functions.**
+- **Component Interaction**
+- **App: The main application component.**
+- **Dashboard: Displays loan and user statuses.**
+- **UserManagement: Manages user profiles.**
+- **LoanTracking: Tracks loan statuses and user details.**
+
+# API Documentation\*\*
+
+## Mocky.io API Endpoints
+
+**Get Users**:
+
+- **Endpoint: https://run.mocky.io/v3/8ace0976-6058-4650-87b5-0a64df72579e5**
+- **Method: Fetch**
+- **Response: List of users**
+- **Fetch Loans:**
+- \*\*
+- **Endpoint: https://run.mocky.io/v3/8ace0976-6058-4650-87b5-0a64df72579e**
+- **Method: GET**
+- **Response: List of loans**
+
+# Styling
+
+## SCSS Structure\*\*
+
+### Key Styles
+
+- **Variables: Define primary colors, fonts, and spacing.**
+- **Mixins: Reusable styles for buttons, layouts, etc.**
+- **Component Styles: Specific styles for individual components.**
+
+## Contributing
+
+## Guidelines
+
+**Coding Standards**:
+Follow Airbnb's JavaScript Style Guide.
+
+**Commit Messages**:
+Used clear and descriptive commit messages.
+
+**Pull Requests**:
+Ensure all tests pass and the code is properly linted before submitting a pull request.
+
+### Steps to Contribute
+
+1. **Fork the repository**.
+
+2. **Create a new branch:**
+   git checkout -b feature/new-feature
+
+3. **Make your changes then commit them**
+   git commit -m "Add new feature"
+
+4. **Push to the branch**
+   git push origin feature/new-feature
+
+5. **Create a pull request on Github**.
