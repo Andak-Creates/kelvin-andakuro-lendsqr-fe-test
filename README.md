@@ -32,6 +32,9 @@ The platform is designed for individuals seeking loans as well as those looking 
 ### Live Demo
 
 Check out the live demo of the application [here](https://kelvin-andakuro-lendsqr-fe-test.vercel.app/).
+**Login Details**
+--email: lendrasm@gmail.com
+--password: lendrassessment
 
 ---
 
